@@ -13,7 +13,6 @@
 
 //header files
 
-
 //usings
 using std::cout;
 using std::endl;
@@ -47,12 +46,13 @@ int main()
 	cout << "Search value is: " << searchValue << endl;
 	cin.get();
 
-
 	//However the double difftime(time_t t1, time_t t0) function returns the difference t1 - t0 expressed in seconds as a double
 
+	//linear search time trial
+	void linearSearch(int arr[], int size, int value);
 
-
+	//binary search time trial
+	void binarySearch(int arr[], int size, int value);
 
 	return 0;
 }
-
