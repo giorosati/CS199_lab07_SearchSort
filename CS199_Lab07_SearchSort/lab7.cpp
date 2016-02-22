@@ -72,7 +72,7 @@ int main()
 	double linearTimeStart = time(0);
 	for (int i = 1; i < searches; i++)
 	{
-		int searchValue = rand() % 1000;  //generates 0 to 999
+		int searchValue = rand() % size;  //generates 0 to 999
 		linearSearch(arrayOne, size, searchValue);
 	}
 	double linearTimeEnd = time(0);
@@ -89,12 +89,12 @@ int main()
 	//step two, binary searches
 	for (int i = 1; i < searches; i++)
 	{
-		int searchValue = rand() % 1000;  //generates 0 to 999
+		int searchValue = rand() % size;  //generates 0 to 999
 		binarySearch(arrayOne, size, searchValue);
 	}
 	double binaryTimeEnd = time(0);
 	double timeElapsed2 = binaryTimeEnd - binaryTimeStart;
-	cout <<  searches << " binary searches took " << timeElapsed2 << " seconds." << endl;
+	cout << searches << " binary searches took " << timeElapsed2 << " seconds." << endl;
 	//cin.ignore();
 	cin.get();
 
@@ -113,7 +113,7 @@ bool linearSearch(int arr[], int size, int searchValue)
 	return false;
 }
 
-bool binarySearch(int arr[], int size, int searchValue) 
+bool binarySearch(int arr[], int size, int searchValue)
 {
 	int first = 0;
 	int last = size - 1;
@@ -157,5 +157,4 @@ void mySort(int arr[], int size)
 			}
 		}
 	} while (swap);
-
 }

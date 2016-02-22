@@ -99,6 +99,9 @@
   <ItemGroup>
     <ClCompile Include="cs199_lab07_searchsort\lab7.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CS199_Lab07_SearchSort\README" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,41 @@
+Giovanni Rosati
+OSU ID# 932510038
+rosatig@oregonstate.edu
+
+February 21, 2016
+Lab 5 README
+CS_199_400_W2016
+
+
+The program can be compiled by typing: 
+ g++ lab7.cpp -o prog
+
+and an executable file named “prog” will be created in the same directory. 
+
+I designed the program to allow the user to enter the # of searches to run 
+so that I could see how the number of searches changed the time required 
+for the linear and a binary searches.
+
+I also tried running the time comparisions with different sizes of arrays,
+by modifying the size constant in the program.
+
+I noticed that the speed differences increase significantly as the size of the array
+increases:
+
+array size		# searches		linear # seconds	binary # seconds
+  100			100,000,000			 24					14
+  100			 50,000,000			 13					 6
+  100			 10,000,000			  2					 2
+1,000			100,000,000			170					17
+1,000			 50,000,000			 84					 9
+1,000			 10,000,000			 17					 1
+
+Given a sufficiently large array (most imortant) and/or a large enough number of searches,
+the binary search was always much faster. For a 1,000 element array it was roughly faster
+by a factor of 10. 
+
+This is true because while the sorting of the array takes a big O of O(n), this occurs only once,
+then the binary search with a big O of O(log n), is far more efficient. The efficiency
+comes from when searching a large set, the elements being searched decreases by 1/2 for every iteration.
+
+
